@@ -5,16 +5,18 @@ spring:
     application:
         name: config-server
 
-# git config
     cloud:
         config:
-            server:
-                git:
-                    uri: https://github.com/devarajuc0402/config-repository.git
-                    default-label: main
+        server:
+            git:
+                uri: https://github.com/devarajuc0402/config-repository.git
+                default-label: main
+                clone-on-start: true
+                force-pull: true
+                basedir: C:/Users/Smile/Desktop/Java_21/Workspace_Microservices/basedir-config-server
 
 management:
-    endpoints:
-        web:
-            exposure:
-                include: health,info
+  endpoints:
+    web:
+      exposure:
+        include: health,info
