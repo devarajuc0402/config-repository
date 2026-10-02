@@ -1,0 +1,20 @@
+server:
+    port: 8888
+
+spring:
+    application:
+        name: config-server
+
+# git config
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/devarajuc0402/config-repository.git
+                    default-label: main
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: health,info

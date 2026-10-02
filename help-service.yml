@@ -1,0 +1,13 @@
+server:
+    port: 8081
+
+    app:
+        message: Hello from Help Service Config Server
+
+spring:
+    application:
+        name: help-service
+
+# config-server config
+    config:
+        import: "configserver:http://localhost:8888/"
